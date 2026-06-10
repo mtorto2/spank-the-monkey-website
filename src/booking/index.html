@@ -11,6 +11,40 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://spankthemonkeyrocks.com/assets/logo-patriot.png" />
   <link rel="icon" href="../assets/logo-patriot.png" />
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MusicGroup",
+        "@id": "https://spankthemonkeyrocks.com/#band",
+        "name": "Spank The Monkey",
+        "url": "https://spankthemonkeyrocks.com/",
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=100063495493449",
+          "https://www.instagram.com/spankthemonkeyban/",
+          "https://open.spotify.com/artist/5QQmPLrpzqJfXLnXwNua5G",
+          "https://www.amazon.com/music/player/artists/B000S2G5H2/spank-the-monkey"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://spankthemonkeyrocks.com/booking/#webpage",
+        "url": "https://spankthemonkeyrocks.com/booking/",
+        "name": "Book Spank The Monkey | Talk to Lindsay",
+        "about": {
+          "@id": "https://spankthemonkeyrocks.com/#band"
+        }
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "booking",
+        "email": "booking@SpankTheMonkeyRocks.com",
+        "url": "https://spankthemonkeyrocks.com/booking/"
+      }
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="../styles.css?v=aec2db035fdc" />
 </head>
 <body class="landing-page">
@@ -26,7 +60,7 @@
       <a href="../#video">Video</a>
       <a href="../#gallery">Gallery</a>
       <a href="../#booking">Booking</a>
-      <a class="nav-cta" href="./">Talk to Lindsay</a>
+      <a class="nav-cta" href="./" data-track="booking_cta_click" data-track-label="booking_nav_talk_to_lindsay">Talk to Lindsay</a>
     </nav>
   </header>
 
@@ -38,16 +72,16 @@
         <p>Ask basic booking questions in the browser. Lindsay can explain the current booking flow and collect your name and callback number for the band.</p>
       </div>
       <div class="booking-agent-media booking-landing-video">
-        <video controls playsinline preload="metadata" poster="../assets/lindsay-booking-agent-poster.jpg?v=9f421157678b" aria-label="Lindsay booking agent introduction video">
+        <video controls playsinline preload="metadata" data-track-video="lindsay_intro_video" poster="../assets/lindsay-booking-agent-poster.jpg?v=9f421157678b" aria-label="Lindsay booking agent introduction video">
           <source src="../assets/lindsay-booking-agent.mp4?v=504185795d6b" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
       <div class="booking-landing-agent">
         <div class="agent-widget-shell" aria-label="Lindsay voice booking agent">
-          <elevenlabs-convai agent-id="agent_9401ktscyd0efq1r6k7ds27xcxq3" variant="full" placement="bottom-right" always-expanded="true" default-expanded="true" dismissible="false"></elevenlabs-convai>
+          <elevenlabs-convai data-track="lindsay_widget_interaction" data-track-label="booking_widget" agent-id="agent_9401ktscyd0efq1r6k7ds27xcxq3" variant="full" placement="bottom-right" always-expanded="true" default-expanded="true" dismissible="false"></elevenlabs-convai>
         </div>
-        <p class="agent-fallback">If the voice widget does not load, <a href="https://elevenlabs.io/app/talk-to?agent_id=agent_9401ktscyd0efq1r6k7ds27xcxq3" target="_blank" rel="noopener noreferrer">open Lindsay in a new tab</a>.</p>
+        <p class="agent-fallback">If the voice widget does not load, <a href="https://elevenlabs.io/app/talk-to?agent_id=agent_9401ktscyd0efq1r6k7ds27xcxq3" target="_blank" rel="noopener noreferrer" data-track="lindsay_fallback_click" data-track-label="booking_fallback_new_tab">open Lindsay in a new tab</a>.</p>
       </div>
     </section>
 
@@ -57,17 +91,17 @@
         <h2>Send the event details directly.</h2>
         <p>Include the date, city, event type, whether sound is needed, and the best callback number.</p>
       </div>
-      <a class="button primary" href="mailto:booking@SpankTheMonkeyRocks.com?subject=Booking%20Inquiry%20-%20Spank%20The%20Monkey&body=Date%3A%0ACity%2FVenue%3A%0AEvent%20type%3A%0ANeed%20sound%3F%3A%0ACallback%20number%3A">Email booking info</a>
+      <a class="button primary" href="mailto:booking@SpankTheMonkeyRocks.com?subject=Booking%20Inquiry%20-%20Spank%20The%20Monkey&body=Date%3A%0ACity%2FVenue%3A%0AEvent%20type%3A%0ANeed%20sound%3F%3A%0ACallback%20number%3A" data-track="email_booking_click" data-track-label="booking_followup_email">Email booking info</a>
     </section>
   </main>
 
   <footer class="site-footer">
     <img src="../assets/logo-patriot.png" alt="Spank The Monkey logo" />
     <p>© 2026 Spank The Monkey. Louisiana hard rock since 1995.</p>
-    <p><a href="mailto:booking@SpankTheMonkeyRocks.com">Booking@SpankTheMonkeyRocks.com</a></p>
+    <p><a href="mailto:booking@SpankTheMonkeyRocks.com" data-track="email_booking_click" data-track-label="booking_footer_email">Booking@SpankTheMonkeyRocks.com</a></p>
   </footer>
 
   <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
-  <script src="../site.js?v=ad31c84fc365"></script>
+  <script src="../site.js?v=d475f0f0947a"></script>
 </body>
 </html>

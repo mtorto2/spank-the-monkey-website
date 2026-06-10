@@ -195,3 +195,9 @@ Live verification:
 - `/booking/` references `lindsay-booking-agent-poster.jpg?v=9f421157678b`.
 - `/booking/` references `styles.css?v=d7fe1043bfb5`.
 - live MP4 SHA prefix matches `504185795d6b`; CSS SHA prefix matches `d7fe1043bfb5`; live poster visually verified as Lindsay/avatar.
+
+## Measurement v1 checkpoint
+
+Added tracking-ready website code locally: JSON-LD structured data, `robots.txt`, `sitemap.xml`, `data-track` hooks, and `window.spankTrack()` forwarding to `gtag`/`plausible` if either is later installed. Local tests and browser event checks pass.
+
+Deploy note: Hostinger File Browser token was expired/403 during this slice. FTP port 21 is reachable again, but saved Hostinger login passwords are not the FTP account password for `u935399282.spankthemonkeyrocks.com`. Next deploy path: reset/save the FTP account password in hPanel or reopen an authenticated File Browser token, then upload `index.html`, `booking/index.html`, `site.js`, `robots.txt`, and `sitemap.xml`.

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://spankthemonkeyrocks.com/sitemap.xml
