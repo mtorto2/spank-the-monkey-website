@@ -42,7 +42,8 @@ Then sync changed files into `hostinger-public_html/`, rebuild the zip if needed
 
 ## Wrap-up / pending
 
-- Initial local git checkpoint should capture the launched site, research, archive, docs, and gig-export tests.
+- Initial local git checkpoint is complete: `47c924a Launch static Spank The Monkey website rebuild`.
+- Working tree was clean after the checkpoint.
 - Do not push to GitHub, change DNS/email, or deploy additional changes unless Matt explicitly approves.
 - Future enhancement: replace the temporary static gig bridge with a cleaner two-layer public gig publishing workflow (`Gigs` calendar = private operational source, reviewed public feed = website source).
-- Future enhancement: add optional booking form/voice agent/EPK assets only after the base website is checkpointed.
+- Future enhancement: add optional booking form/voice agent/EPK assets after the base website checkpoint.
