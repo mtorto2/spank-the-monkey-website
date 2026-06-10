@@ -55,11 +55,10 @@ def normalize_venue_key(value: str) -> str:
 def parse_event_date(event: dict) -> date:
     raw = event["start"]
     parsed = datetime.fromisoformat(raw.replace("Z", "+00:00"))
-    # EventKit export serializes starts as UTC. For this website, Matt wants the
-    # calendar date as entered/represented by the gig record, not a time-zone
-    # converted performance start date. Using the ISO date portion avoids showing
-    # Friday for a Saturday gig when the source was stored near midnight UTC.
-    return parsed.date()
+    # EventKit exports starts as UTC timestamps. The public site should show the
+    # Calendar day Matt sees locally, not the UTC day. Evening gigs often cross
+    # midnight in UTC, so using parsed.date() shifts them one day late.
+    return parsed.astimezone(LOCAL_TZ).date()
 
 
 def is_spank_event(event: dict) -> bool:

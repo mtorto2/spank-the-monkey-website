@@ -44,8 +44,31 @@ class GigExportTests(unittest.TestCase):
             [g["location"] for g in gigs],
             ["Coop’s on 621 — Gonzales, LA", "Rock ’n’ Bowl de Lafayette — Lafayette, LA"],
         )
-        self.assertEqual([g["date"] for g in gigs], ["Jun 20", "Aug 23"])
+        self.assertEqual([g["date"] for g in gigs], ["Jun 19", "Aug 22"])
         self.assertNotIn("Matt Rich", json.dumps(gigs))
+
+    def test_uses_local_calendar_date_not_utc_date_for_evening_gigs(self):
+        events = [
+            {
+                "title": "Spank - Cajun wharf lake Charles",
+                "start": "2026-06-14T02:00:00Z",
+                "location": "",
+                "notes": "",
+                "isAllDay": False,
+            },
+            {
+                "title": "Spank Coop’s",
+                "start": "2026-06-20T00:00:00Z",
+                "location": "",
+                "notes": "",
+                "isAllDay": False,
+            },
+        ]
+
+        gigs = gig_export.extract_spank_gigs(events, today=date(2026, 6, 10))
+
+        self.assertEqual([g["date"] for g in gigs], ["Jun 13", "Jun 19"])
+        self.assertEqual([g["isoDate"] for g in gigs], ["2026-06-13", "2026-06-19"])
 
     def test_uses_calendar_location_when_present_and_date_only_for_all_day(self):
         events = [

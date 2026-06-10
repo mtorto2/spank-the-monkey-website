@@ -13,7 +13,7 @@ Replace the former Hostinger Website Builder/Zyro site with a maintainable stati
 - Deploy source: `src/`
 - FTP upload mirror: `hostinger-public_html/`
 - Credentials: stored in 1Password only; never commit FTP/API credentials
-- Booking CTA: `Booking@SpankTheMonkeyRocks.com`
+- Booking CTA: `Booking@SpankTheMonkeyRocks.com` plus `/booking/` Lindsay voice-agent landing page
 - Old site capture: `archive/current-site/20260610-061810/`
 - Research/design references: `research/`
 - Upcoming shows: generated from Apple Calendar `Gigs` by `tools/gig_export.py`
@@ -61,9 +61,16 @@ Rules:
 
 ## Current live versions
 
-- `styles.css?v=965fc1197fe7`
-- `gigs-data.js?v=f1e0519f2655`
+- `styles.css?v=aec2db035fdc`
+- `gigs-data.js?v=cf66522bc4d6`
 - `site.js?v=ad31c84fc365`
+
+## Current booking funnel
+
+- `/booking/` landing page embeds Lindsay intro video and ElevenLabs ConvAI widget.
+- Agent ID: `agent_9401ktscyd0efq1r6k7ds27xcxq3`.
+- Public pricing/base-area bullets are intentionally removed from the landing page; Lindsay/agent handles lead intake.
+- Root homepage CTAs route to `/booking/`; inline agent is not embedded on the root homepage.
 
 ## Future improvements
 

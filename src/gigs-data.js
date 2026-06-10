@@ -1,12 +1,12 @@
 window.SPANK_SHOWS = [
   {
-    "date": "Jun 14",
-    "isoDate": "2026-06-14",
+    "date": "Jun 13",
+    "isoDate": "2026-06-13",
     "location": "Cajun Wharf — Lake Charles, LA"
   },
   {
-    "date": "Jun 20",
-    "isoDate": "2026-06-20",
+    "date": "Jun 19",
+    "isoDate": "2026-06-19",
     "location": "Coop’s on 621 — Gonzales, LA"
   },
   {
@@ -15,18 +15,18 @@ window.SPANK_SHOWS = [
     "location": "Fred’s on the River — Prairieville, LA"
   },
   {
-    "date": "Aug 2",
-    "isoDate": "2026-08-02",
+    "date": "Aug 1",
+    "isoDate": "2026-08-01",
     "location": "Fat Cat Saloon — Prairieville, LA"
   },
   {
-    "date": "Aug 23",
-    "isoDate": "2026-08-23",
+    "date": "Aug 22",
+    "isoDate": "2026-08-22",
     "location": "Rock ’n’ Bowl de Lafayette — Lafayette, LA"
   },
   {
-    "date": "Aug 29",
-    "isoDate": "2026-08-29",
+    "date": "Aug 28",
+    "isoDate": "2026-08-28",
     "location": "Coop’s on 621 — Gonzales, LA"
   },
   {
@@ -35,8 +35,8 @@ window.SPANK_SHOWS = [
     "location": "Gulf Place — Gulf Shores, AL"
   },
   {
-    "date": "Oct 11",
-    "isoDate": "2026-10-11",
+    "date": "Oct 10",
+    "isoDate": "2026-10-10",
     "location": "Houma Fest — Houma, LA"
   }
 ];
