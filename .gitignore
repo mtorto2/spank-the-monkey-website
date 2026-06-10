@@ -1,0 +1,21 @@
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
+
+# Node/build outputs
+node_modules/
+dist/
+build/
+.astro/
+.next/
+
+# Env/secrets
+.env
+.env.*
+!.env.example
+
+# Large/generated scratch
+.tmp/
+cache/
+hostinger-public_html.zip

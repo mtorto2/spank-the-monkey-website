@@ -1,0 +1,41 @@
+# Capture run 20260610-061810
+
+## curl headers
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 200 
+date: Wed, 10 Jun 2026 11:18:10 GMT
+content-type: text/html
+vary: Accept-Encoding
+last-modified: Mon, 11 Nov 2024 12:15:27 GMT
+etag: "b901b7f9e8fbf5a70a8a0fb7fb909bf7"
+x-goog-meta-x-goog-source-etag: "b901b7f9e8fbf5a70a8a0fb7fb909bf7"
+age: 2888792
+server: hcdn
+alt-svc: h3=":443"; ma=86400
+x-hcdn-request-id: 55bf6f9c9eae59a669877605218f789e-bos-edge1
+x-hcdn-cache-status: HIT
+content-security-policy: frame-ancestors *.builder-preview.com *.hostinger.com *.hostinger.io *.hostinger.in *.hostinger.co.uk
+link: <https://assets.zyrosite.com>; rel=preconnect; crossorigin, <https://fonts.googleapis.com>; rel=preconnect; crossorigin, <https://fonts.gstatic.com>; rel=preconnect; crossorigin, <https://cdn.zyrosite.com>; rel=preconnect; crossorigin
+x-xss-protection: 1; mode=block
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+x-content-type-options: nosniff
+x-powered-by: HostingerWebsiteBuilder
+platform: hostinger
+cache-control: public, max-age=3600
+
+
+## curl body first bytes
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><!--[--><title>Spank The Monkey | Spank The Monkey</title><meta name="description" content="Rock band from Louisiana playing original and cover rock songs - 90&#39;s and 2000&#39;s including bands like Tool, Stone Temple Pilots, and more!"><link rel="icon" href="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=48,h=48,fit=crop,f=png/m2WlQ4k3lqC0apPa/spank-website-favicon-image-64-x-64-px-YX4X66808ztONr36.png"><link rel="apple-touch-icon" href="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=48,h=48,fit=crop,f=png/m2WlQ4k3lqC0apPa/spank-website-favicon-image-64-x-64-px-YX4X66808ztONr36.png"><meta content="https://spankthemonkeyrocks.com/" property="og:url"><link rel="canonical" href="https://spankthemonkeyrocks.com/"><meta content="Spank The Monkey | Spank The Monkey" property="og:title"><meta name="twitter:title" content="Spank The Monkey | Spank The Monkey"><meta content="website" property="og:type"><meta property="og:description" content="Rock band from Louisiana playing original and cover rock songs - 90&#39;s and 2000&#39;s including bands like Tool, Stone Temple Pilots, and more!"><meta name="twitter:description" content="Rock band from Louisiana playing original and cover rock songs - 90&#39;s and 2000&#39;s including bands like Tool, Stone Temple Pilots, and more!"><meta property="og:site_name" content="Spank The Monkey"><meta name="keywords" content="Rock Band, Louisiana Rock Cover Band, 90&#39;s Rock Band"><meta content="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=630,fit=crop,f=jpeg/m2WlQ4k3lqC0apPa/spank-website-link-image-dOq7L5PKwPiBzJj4.png" property="og:image"><meta content="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=630,fit=crop,f=jpeg/m2WlQ4k3lqC0apPa/spank-website-link-image-dOq7L5PKwPiBzJj4.png" name="twitter:image"><meta content="" property="og:image:alt"><meta content="" name="twitter:image:alt"><meta name="twitter:card" content="summary_large_image"><!----><link rel="preconnect"><!----><!----><!----><!----><!--[--><link rel="alternate" hreflang="x-default" href="https://spankthemonkeyrocks.com/"><!--]--><link href="https://cdn.zyrosite.com/u1/google-fonts/font-faces?family=Spartan:wght@400;800&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap" rel="preconnect" crossorigin="true"><link href="https://cdn.zyrosite.com/u1/google-fonts/font-faces?family=Spartan:wght@400;800&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap" rel="preload" as="style"><link href="https://cdn.zyrosite.com/u1/google-fonts/font-faces?family=Spartan:wght@400;800&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" referrerpolicy="no-referrer"><!--]--><style></style><link rel="prefetch" href="https://cdn.zyrosite.com/cdn-builder-placeholders/astro-traffic.txt"><script>(function(){const publishDate = null;
+
+		const currentDate = new Date().setHours(0, 0, 0, 0);
+
+		if (publishDate && currentDate < publishDate) {
+			window.location.replace('/')
+		}
+	})();</script><link rel="stylesheet" href="/_astro-1719239970155/_slug_.Brp1OYmU.css" />
+<style>#fb-root{position:relative;z-index:17}#fb-root .fb_dialog{left:-1000px}:root{--color-meteorite-dark: #2f1c6a;--color-meteorite: #8c85ff;--color-meteorite-light: #d5dfff;--color-primary-dark: #5025d1;--color-primary: #673de6;--color-primary-light: #ebe4ff;--color-danger-dark: #d63163;--color-danger: #fc5185;--color-danger-light: #ffe8ef;--color-warning-dark: #fea419;--color-warning-dark-2: #9F6000;--color-warning: #ffcd35;--color-warning-light: #fff8e2;--color-success-dark: #008361;--color-success: #00b090;--color-success-light: #def4f0;--color-dark: #1d1e20;--color-gray-dark: #36344d;--color-gray: #727586;--color-gray-border: #dadce0;--color-gray-light: #f2f3f6;--color-light: #fff;--color-azure: #357df9;--color-azure-light: #e3ebf9;--color-azure-dark: #265ab2}.whats-app-bubble{position:fixed;right:20px;bottom:24px;z-index:17;display:flex;cursor:pointer;border-radius:100px;box-shadow:#00000026 0 4px 12px}.whats-app-bubble--next-to-messenger{right:95px}.globalClass_2ebe{position:relative;z-index:17}#wtpQualitySign_fixedCSS,#wtpQualitySign_popupCSS{bottom:10px!important}#wtpQualitySign_fixedCSS{z-index:17!important}#wtpQualitySign_popupCSS{z-index:18!important}
+</style></head> <body> <div> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();;(()=>{var b=Object.defineProperty;var f=(c,o,i)=>o in c?b(c,o,{enumerable:!0,configurable:!0,writable:!0,value:i}):c[o]=i;var l=(c,

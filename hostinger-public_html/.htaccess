@@ -1,0 +1,16 @@
+# Spank The Monkey static site cache controls.
+# Keep the shell assets cacheable, but force HTML and gig data to revalidate so
+# Safari/Hostinger CDN do not hide current Calendar-synced shows.
+<IfModule mod_headers.c>
+  <FilesMatch "^(index\.html|gigs-data\.js|site\.js|styles\.css)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/javascript "access plus 0 seconds"
+</IfModule>
