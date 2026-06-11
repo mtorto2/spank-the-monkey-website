@@ -138,18 +138,18 @@ Close idea:
 6. Add lead-watcher automation after live widget exists.
 
 
-## 2026-06-10 Lindsay live widget integration
+## 2026-06-10 booking agent live widget integration
 
-- ElevenLabs agent: `agent_9401ktscyd0efq1r6k7ds27xcxq3` (`Lindsay - Spank The Monkey Booking Agent`).
-- Voice: `Lindsay V1 (from ads)` / `CuGMltppBgjcO4au0sa4`.
+- ElevenLabs agent: `agent_9401ktscyd0efq1r6k7ds27xcxq3` (`booking agent - Spank The Monkey Booking Agent`).
+- Voice: `booking agent V1 (from ads)` / `CuGMltppBgjcO4au0sa4`.
 - Corrected base area: Baton Rouge / Lafayette only.
 - Outside Baton Rouge / Lafayette: travel fee may apply and hotel rooms may be needed.
-- Site integration: `#booking-agent` section embeds the Lindsay intro MP4 and inline ElevenLabs ConvAI widget.
+- Site integration: `#booking-agent` section embeds the booking agent intro MP4 and inline ElevenLabs ConvAI widget.
 - Public fallback link: `https://elevenlabs.io/app/talk-to?agent_id=agent_9401ktscyd0efq1r6k7ds27xcxq3`.
 
 ## 2026-06-10 ads landing page deployment
 
 - Live landing page: `https://spankthemonkeyrocks.com/booking/`.
 - Root homepage CTAs link to `/booking/`; the root homepage intentionally does not embed the voice agent inline.
-- Deployed Hostinger files: `index.html`, `styles.css`, `booking/index.html`, `assets/lindsay-booking-agent.mp4`, `assets/logo-patriot.png`.
-- Live verification confirmed `/booking/` contains the Lindsay agent ID, widget script, and MP4 reference; public pricing/base-area bullets are intentionally removed from the page.
+- Deployed Hostinger files: `index.html`, `styles.css`, `booking/index.html`, `assets/booking-agent.mp4`, `assets/logo-patriot.png`.
+- Live verification confirmed `/booking/` contains the booking agent agent ID, widget script, and MP4 reference; public pricing/base-area bullets are intentionally removed from the page.
