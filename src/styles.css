@@ -11,3 +11,5 @@
 
 /* Booking landing: remove the outer section card; let only the video and ElevenLabs widget be the visible rectangles. */
 .booking-landing{background:transparent;border:0;box-shadow:none;border-radius:0}.booking-landing .booking-landing-agent{display:flex;flex-direction:column;align-self:stretch}.booking-landing .agent-widget-shell{padding:0;border:0;background:transparent;box-shadow:none;border-radius:26px;overflow:visible}.booking-landing .agent-widget-shell elevenlabs-convai{border-radius:26px!important;box-shadow:0 24px 54px rgba(0,0,0,.4);border:0!important;background:transparent!important}@media (min-width:1000px){.booking-landing-video,.booking-landing-agent{height:620px}.booking-landing .agent-widget-shell{height:620px;min-height:620px}.booking-landing .agent-widget-shell elevenlabs-convai{height:620px!important;min-height:620px!important}.booking-landing .agent-fallback{margin-top:10px}}
+/* Hero subject protection: keep the headline in the left lane so the lead singer/logo remain visible. */
+@media (min-width:900px){.hero-content{max-width:min(640px,48vw)}.hero-copy{max-width:600px}.hero h1{font-size:clamp(3.2rem,8vw,7.7rem)}}
