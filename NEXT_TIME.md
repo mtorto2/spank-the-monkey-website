@@ -201,3 +201,47 @@ Live verification:
 Added tracking-ready website code locally: JSON-LD structured data, `robots.txt`, `sitemap.xml`, `data-track` hooks, and `window.spankTrack()` forwarding to `gtag`/`plausible` if either is later installed. Local tests and browser event checks pass.
 
 Deploy note: Hostinger File Browser token was expired/403 during this slice. FTP port 21 is reachable again, but saved Hostinger login passwords are not the FTP account password for `u935399282.spankthemonkeyrocks.com`. Next deploy path: reset/save the FTP account password in hPanel or reopen an authenticated File Browser token, then upload `index.html`, `booking/index.html`, `site.js`, `robots.txt`, and `sitemap.xml`.
+
+## 2026-06-12 checkpoint — Fable 5 booking funnel polish live
+
+Current git/deploy state:
+- Branch `main` is pushed to `origin/main`.
+- Latest commit before this handoff note: `b355364 remove visible booking email template`.
+- Live site deployed via FTP and verified after the booking-page friction slice.
+
+What changed in the latest Spank pass:
+- Ran actual Anthropic model `claude-fable-5` against the live site for critique (not generic Tate/subagent critique).
+- Added compressed promo proof video on homepage from `/Users/matt/Desktop/SPANK 2023 PROMO WIDE.mp4`:
+  - `assets/video/spank-promo-2023.mp4`
+  - `assets/video/spank-promo-2023-poster.jpg`
+- Improved promo video poster frame and deployed it.
+- Booking page copy now explains the agent clearly:
+  - “Use the booking assistant below — talk or type, about two minutes. It collects your event details and sends them straight to the band. We reply within one business day.”
+- Booking page email fallback is first-class and visible:
+  - visible `Booking@SpankTheMonkeyRocks.com`
+  - mailto button remains
+  - visible copy-paste template line was removed per Matt’s review.
+- Recent visual tweaks are live:
+  - prior/non-upscaled hero image restored
+  - hero crop widened slightly to show more stage
+  - Image 7 guitarist gallery image is vertical with no blurred letterboxing
+  - Heath USA image replaced the old crowd slot
+
+Live verification completed:
+- `python3 -m unittest discover -s tests -q` passes: 6/6.
+- Booking page live no longer contains `Copy-paste template`.
+- Booking page live contains the agent explainer and visible email.
+- Promo poster/video assets return HTTP 200.
+- Latest relevant live checks used cachebust URLs like `/booking/?template-removed=1` and `/?promo-poster=1#video`.
+
+Fable 5 remaining recommended next slices, in priority order:
+1. Add a real 6-field booking form to `/booking/` (date, venue/city, event type, set length, sound/production needs, callback number). Agent becomes enhancement, not only path.
+2. Replace proof-strip claims with receipts: venue/festival/casino names, show count, one promoter/venue quote if available.
+3. Dedupe remaining repeated copy around “clubs, festivals, casinos, private events,” “crowd-tested,” “loud rooms,” and “Gulf South.”
+4. Add EPK/one-sheet download block eventually: stage plot, input list, band size, set lengths, travel radius, sample setlist, contact/phone if approved.
+5. Technical/mobile polish: hero `100vh` → `100svh`, test `.hero-card` around 860–1100px, confirm video `poster`/`playsinline`/`preload`, nav toggle accessibility, widget scroll behavior.
+
+Operational reminders:
+- Keep public site copy role-based: “booking agent,” no public Lindsay/person-name references.
+- Do not push/deploy/destructive changes without Matt approval gates, except scoped website updates he explicitly says to do.
+- For future “Fable” asks, route to actual Anthropic `claude-fable-5` model and verify output starts with `MODEL_USED: claude-fable-5`.
