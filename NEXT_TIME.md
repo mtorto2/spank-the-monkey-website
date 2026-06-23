@@ -8,8 +8,31 @@
 - FTP deploy payload mirror lives under `hostinger-public_html/`.
 - Old Hostinger/Zyro Website Builder site capture lives under `archive/current-site/20260610-061810/`.
 - Research/design references live under `research/`.
-- Booking CTA: `Booking@SpankTheMonkeyRocks.com`.
+- Booking CTA: `Booking@SpankTheMonkeyRocks.com` and outcome CTA text `Start Booking Inquiry`.
 - Credentials remain in 1Password; do not write FTP/API credentials into this repo.
+
+## 2026-06-23 local checkpoint — positioning/CTA cleanup committed locally
+
+Current local work is committed locally, but not pushed or deployed.
+
+Local changes in the checkpoint:
+- Homepage copy shifted away from `Louisiana rock` genre framing toward `90s & 2000s rock` for festivals, casinos, and private events.
+- Root and `/booking/` nav CTAs standardized to `Start Booking Inquiry`; stale `Book the Band` tracking labels removed.
+- `/booking/` title, OG title, and JSON-LD page name updated to `90s & 2000s Rock Booking`.
+- Added durable local preview workflow: `make preview` -> `tools/preview_server.py` serving `src/` on `http://127.0.0.1:8768/`.
+
+Verification completed locally:
+- Source and deploy mirror match for `src/index.html` <-> `hostinger-public_html/index.html`.
+- Source and deploy mirror match for `src/booking/index.html` <-> `hostinger-public_html/booking/index.html`.
+- Text scan found no `Book the Band`, `Louisiana rock`, `Louisiana hard rock`, `bars`, `clubs`, `Lindsay`, `higher-paying`, or `higher-value` in browser HTML source/mirror files.
+- `python3 -m py_compile tools/preview_server.py` passes.
+- `python3 -m unittest discover -s tests -q` passes: 6/6.
+- `git diff --check` passes.
+- Local browser smoke passes for `/` and `/booking/`; console has no JS errors; title/CTA checks match the current positioning.
+
+Next safe action:
+- Commit locally if Matt approves. Recommended commit message: `copy: align Spank booking funnel positioning`.
+- Do not push, deploy, change DNS/email, or contact anyone without explicit approval.
 
 ## Production state
 
