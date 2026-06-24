@@ -19,3 +19,6 @@ build/
 .tmp/
 cache/
 hostinger-public_html.zip
+
+# Large local project media kept near the repo but not tracked in git
+/Project Media/
