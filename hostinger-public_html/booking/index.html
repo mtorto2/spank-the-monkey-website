@@ -45,7 +45,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="../styles.css?v=6a9e8fa43ad7" />
+  <link rel="stylesheet" href="../styles.css?v=78b847f043ba" />
 </head>
 <body class="landing-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -95,14 +95,29 @@
       </div>
     </section>
 
-    <section class="section landing-followup">
-      <div>
-        <p class="eyebrow">Prefer email?</p>
-        <h2>Send your event details.</h2>
-        <p>Include the date, city and venue, event type, set length, production needs, and the best contact for follow-up.</p>
-        <p><a href="mailto:booking@SpankTheMonkeyRocks.com" data-track="email_booking_click" data-track-label="booking_followup_visible_email">Booking@SpankTheMonkeyRocks.com</a></p>
+    <section class="section booking-form-section" id="inquiry">
+      <div class="booking-form-heading">
+        <p class="eyebrow">Prefer a simple form?</p>
+        <h2>Send a booking inquiry.</h2>
+        <p>Share the basics below. The band reviews every request and follows up with availability, pricing, and next steps.</p>
       </div>
-      <a class="button primary" href="mailto:booking@SpankTheMonkeyRocks.com?subject=Booking%20Inquiry%20-%20Spank%20The%20Monkey&body=Hi%20%E2%80%94%20I%27d%20like%20to%20check%20availability%20for%20%5Bdate%5D%20in%20%5Bcity%2Fvenue%5D.%20Event%20type%3A%20%5Btype%5D.%20Set%20length%3A%20%5Blength%5D.%20Production%20needs%3A%20%5Bneeds%5D.%20Best%20contact%3A%20%5Bname%2C%20email%2C%20phone%5D." data-track="email_booking_click" data-track-label="booking_followup_email">Email booking details</a>
+      <form id="booking-inquiry-form" class="booking-form" action="https://formspree.io/f/myeyyvae" method="POST" data-track="booking_form_submit" data-track-label="booking_inquiry_form">
+        <div class="booking-form-grid">
+          <label>Contact name<input name="contact_name" autocomplete="name" required data-fs-field /></label>
+          <label>Email address<input type="email" name="email" autocomplete="email" required data-fs-field /></label>
+          <label>Phone number<input type="tel" name="phone" autocomplete="tel" data-fs-field /></label>
+          <label>Event date<input type="date" name="event_date" required data-fs-field /></label>
+          <label class="booking-form-wide">Venue / city<input name="venue_city" autocomplete="organization" required data-fs-field /></label>
+          <label>Event type<select name="event_type" required data-fs-field><option value="" selected disabled>Select one</option><option>Venue show</option><option>Festival</option><option>Casino</option><option>Private event</option><option>Corporate event</option><option>Other</option></select></label>
+          <label>Desired set length<input name="set_length" placeholder="Example: 2 x 90 minutes" data-fs-field /></label>
+          <label class="booking-form-wide">Production needs / anything else<textarea name="production_notes" rows="5" placeholder="Stage, sound, load-in, crowd size, or other useful details" data-fs-field></textarea></label>
+        </div>
+        <label class="booking-form-trap" aria-hidden="true">Leave this blank<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
+        <p class="booking-form-status" data-fs-success role="status"></p>
+        <p class="booking-form-status booking-form-error" data-fs-error role="alert"></p>
+        <button class="button primary" type="submit" data-fs-submit-btn>Send booking inquiry</button>
+        <p class="booking-form-fallback">Prefer email? <a href="mailto:booking@SpankTheMonkeyRocks.com?subject=Booking%20Inquiry%20-%20Spank%20The%20Monkey" data-track="email_booking_click" data-track-label="booking_form_email_fallback">Booking@SpankTheMonkeyRocks.com</a></p>
+      </form>
     </section>
   </main>
 
@@ -113,6 +128,31 @@
   </footer>
 
   <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+  <script>
+    (() => {
+      const form = document.querySelector('#booking-inquiry-form');
+      if (!form) return;
+      const submit = form.querySelector('[data-fs-submit-btn]');
+      const success = form.querySelector('[data-fs-success]');
+      const error = form.querySelector('[data-fs-error]');
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        submit.disabled = true;
+        success.textContent = '';
+        error.textContent = '';
+        try {
+          const response = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+          if (!response.ok) throw new Error(`Form submission failed: ${response.status}`);
+          form.reset();
+          success.textContent = 'Thanks — your inquiry is in. We’ll follow up soon.';
+        } catch (submissionError) {
+          error.innerHTML = 'Something did not go through. Please try again or email <a href="mailto:booking@SpankTheMonkeyRocks.com">Booking@SpankTheMonkeyRocks.com</a>.';
+        } finally {
+          submit.disabled = false;
+        }
+      });
+    })();
+  </script>
   <script src="../site.js?v=d475f0f0947a"></script>
 </body>
 </html>
